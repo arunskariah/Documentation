@@ -1,0 +1,20 @@
+make install-grafana
+make install-prometheus
+kubectl port-forward <> <>:<>
+  Grafana 3000
+  prometheus 9090
+kubectl port-forward mab-redis-ha-commander-7d7cfc656d-s9hc8 8081:8081
+
+docker pull artifacts.kpn.org/prom/prometheus:v2.4.2
+
+in:out 9122:9121
+
+kubectl exec -ti mab-redis-ha-server-2 /bin/sh
+cat /etc/hosts
+
+
+{{- range $in, $kafka :=   .Values.KafkaTopics}}
+          {{- range  $ind := until (int $kafka.PartitionCount)}}
+          - kafka-{{$ind}}.kafka.{{ $.Release.Namespace }}.svc.{{ $.Values.global.ClusterHost }}:8050
+          {{- end }}
+          {{- end }}
