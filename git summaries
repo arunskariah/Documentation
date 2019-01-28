@@ -1,0 +1,7 @@
+git checkout <name> -b // for new branch
+git commit .
+git add <name>
+git stash
+git stash apply
+git checkout -vv
+git push origin <branch_name>
