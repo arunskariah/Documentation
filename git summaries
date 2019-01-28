@@ -5,3 +5,18 @@ git stash
 git stash apply
 git checkout -vv
 git push origin <branch_name>
+
+
+cd Summaries/Documentation/
+  502  git checkout sub -b
+  503  git checkout -b sub
+  504  git commit
+  505  git add .
+  506  git commit
+  507  git push
+  508  git push origin sub
+  509  git pull
+  510  git checkout master
+  511  git pull
+  512  git branch -d sub
+  513  git push origin --delete sub
